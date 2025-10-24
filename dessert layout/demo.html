@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .search-container {
+  position: relative;
+  width: 250px;
+  font-family: Arial, sans-serif;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #ffe6ea;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  padding: 5px;
+}
+
+.icon {
+  color: #a03a55;
+  font-size: 18px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  background: #fff6f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 10px;
+  display: none; /* hidden by default */
+  list-style: none;
+}
+
+.dropdown li {
+  display: inline-block;
+  background: #fff;
+  margin: 5px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+
+/* Show dropdown when search-box (or its children) is focused */
+.search-container:focus-within .dropdown {
+  display: block;
+}
+
+  </style>
+</head>
+<body>
+  <div class="search-container">
+  <div class="search-box">
+    <input type="text" placeholder="Search">
+    <span class="icon">🔍</span>
+  </div>
+
+  <ul class="dropdown">
+    <li>Brownies</li>
+    <li>Pastry</li>
+    <li>Cup Cake</li>
+    <li>Tart</li>
+    <li>Tea Cake</li>
+    <li>Jar Cake</li>
+  </ul>
+</div>
+
+</body>
+</html>
